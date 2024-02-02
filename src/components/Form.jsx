@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import {  Form, Button, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
@@ -37,30 +37,7 @@ const UserDataForm = () => {
       },
     }));
   };
-  const isPageFilled = () => {
-    switch (page) {
-      case 1:
-        return (
-          userData.personalDetails.firstName &&
-          userData.personalDetails.lastName &&
-          userData.personalDetails.email &&
-          userData.personalDetails.mobile
-        );
-      case 2:
-        return (
-          userData.address.addressLine1 &&
-          userData.address.addressLine2 &&
-          userData.address.city
-        );
-      case 3:
-        return (
-          userData.paymentDetails.cardNumber &&
-          userData.paymentDetails.expiryDate
-        );
-      default:
-        return false;
-    }
-  };
+  
 
 
   const handleNext = () => {
